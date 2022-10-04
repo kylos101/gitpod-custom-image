@@ -7,5 +7,5 @@ tasks:
       echo "This runs on each workspace start"
   - init: |
       echo "Sleeping... Long pre-build task"
-      sleep 20s
+      sleep 10s
       echo "Done sleeping!"
