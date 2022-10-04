@@ -9,3 +9,9 @@ tasks:
       echo "Sleeping... Long pre-build task"
       sleep 10s
       echo "Done sleeping!"
+github:
+  prebuilds:
+    branches: true
+    addCheck: prevent-merge-on-error
+    addBadge: true
+    addLabel: true
