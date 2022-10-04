@@ -2,4 +2,6 @@ tasks:
   - init: |
       echo "Hello"
   - command: |
+      echo "Sleeping... Long pre-build task"
       sleep 20s
+      echo "Done sleeping!"
