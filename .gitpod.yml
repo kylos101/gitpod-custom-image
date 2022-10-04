@@ -1,7 +1,11 @@
 tasks:
+  - before: |
+      echo "This runs first, in pre-build"
+    init: |
+      echo "This runs in pre-build"
+    command: |
+      echo "This runs on each workspace start"
   - init: |
-      echo "Hello"
-  - command: |
       echo "Sleeping... Long pre-build task"
       sleep 20s
       echo "Done sleeping!"
