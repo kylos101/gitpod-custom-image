@@ -8,5 +8,3 @@ ENV HOME=/home/gitpod
 WORKDIR $HOME
 
 USER gitpod
-
-RUN sudo echo "Running 'sudo' for Gitpod: success"
