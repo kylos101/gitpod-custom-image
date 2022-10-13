@@ -3,6 +3,7 @@ FROM buildpack-deps:bullseye
 RUN apt-get update && apt-get install -yq \
     sudo \
     git \
+    jq \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Install tailscale. Requires sudo.
