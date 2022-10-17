@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:20.04
+FROM amd64/ubuntu:latest
 
 RUN apt-get update && apt-get install -yq \
     sudo \
