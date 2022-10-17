@@ -1,14 +1,21 @@
-FROM buildpack-deps:bullseye
+FROM amd64/ubuntu:20.04
 
 RUN apt-get update && apt-get install -yq \
     sudo \
     git \
     jq \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
+
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install tailscale. Requires sudo.
 RUN curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add - \
     && curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list \
+    && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null \
     && apt-get update && apt-get install -yq \
