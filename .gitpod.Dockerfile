@@ -28,4 +28,6 @@ RUN curl -o /usr/local/bin/docker-compose -fsSL https://github.com/docker/compos
 
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
+ENV TRIGGER_REBUILD=1
+
 USER gitpod
