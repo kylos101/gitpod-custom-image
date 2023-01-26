@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: foo
-    init: sleep 302
+    init: sleep 303
   # - name: tailscaled
   #   command: |
   #     if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
