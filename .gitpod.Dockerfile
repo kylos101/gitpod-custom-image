@@ -1,19 +1,10 @@
-FROM amd64/ubuntu:latest
+FROM redhat/ubi9:latest
 
-ENV TRIGGER_REBUILD=6
+ENV TRIGGER_REBUILD=0
 
-RUN apt-get update && apt-get install -yq \
-    git \
-    git-lfs \
-    sudo \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
+RUN dnf install git git-lfs sudo gnupg -y && dnf clean all \
+    && sudo update-ca-trust
 
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -yq \
-    ca-certificates curl gnupg lsb-release
-
-RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
-
-RUN apt-get update && apt-get install -yq golang-go
+RUN useradd -l -u 33333 -G wheel -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 USER gitpod
