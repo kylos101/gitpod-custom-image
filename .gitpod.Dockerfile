@@ -1,6 +1,6 @@
 FROM amd64/ubuntu:latest
 
-ENV TRIGGER_REBUILD=6
+ENV TRIGGER_REBUILD=7
 
 RUN apt-get update && apt-get install -yq \
     git \
