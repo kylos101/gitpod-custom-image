@@ -21,4 +21,4 @@ USER gitpod
 # show env var keys
 RUN printenv | awk -F= '{print $1}' > /home/gitpod/build_time_vars
 
-RUN echo "FOOBAR_VISIBLE" > /home/gitpod/only_with_gp_validate
+RUN echo "${FOO_VISIBLE}" > /home/gitpod/only_with_gp_validate
