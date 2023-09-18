@@ -16,7 +16,7 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 RUN apt-get update && apt-get install -yq golang-go
 
-# show env var keys
-RUN printenv | awk -F= '{print $1}' > ~/home/gitpod/build_time_vars
-
 USER gitpod
+
+# show env var keys
+RUN printenv | awk -F= '{print $1}' > /home/gitpod/build_time_vars
