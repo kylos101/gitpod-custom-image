@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:latest
+FROM kyleatgitpod/test:latest
 
 ENV TRIGGER_REBUILD=7
 
