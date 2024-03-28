@@ -1,6 +1,6 @@
 image:
   file: .gitpod.Dockerfile
-tasks:
+# tasks:
   # - name: foo
   #   init: sleep 303
   # - name: tailscaled
