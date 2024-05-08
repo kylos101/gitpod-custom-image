@@ -1,6 +1,6 @@
 FROM gitpod/workspace-base:2024-04-10-13-34-16
 
-ENV TRIGGER_REBUILD=8
+ENV TRIGGER_REBUILD=9
 
 # RUN apt-get update && apt-get install -yq \
 #     git \
