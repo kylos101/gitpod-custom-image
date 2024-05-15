@@ -1,4 +1,4 @@
-image: https://github.com/kylos101/gitpod-custom-image/tree/kylos101/latest-image
+image: docker.cloudsmith.io/test-a4ff/test/workspace-full:latest
 tasks:
   - name: foo
     init: sleep 3
