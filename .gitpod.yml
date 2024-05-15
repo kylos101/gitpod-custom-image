@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: https://github.com/kylos101/gitpod-custom-image/tree/kylos101/latest-image
 tasks:
   - name: foo
     init: sleep 3
