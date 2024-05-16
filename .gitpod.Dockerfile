@@ -1,5 +1,5 @@
-ARG FOO=BAR
+ARG FOO=BAR2
 
-FROM docker.cloudsmith.io/test-a4ff/test/workspace-full:latest
+FROM gitpod/workspace-full:2022-05-08-14-31-53
 
 ENV TRIGGER_REBUILD=7
