@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:latest
+FROM gitpod/workspace-node-22:2025-01-23-10-32-08
 
 ENV TRIGGER_REBUILD=7
 

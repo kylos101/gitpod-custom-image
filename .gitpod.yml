@@ -1,4 +1,5 @@
-image: gitpod/workspace-node-22:2025-01-23-10-32-08
+image:
+  file: .gitpod.Dockerfile
 tasks:
   - name: foo
     init: sleep 303
