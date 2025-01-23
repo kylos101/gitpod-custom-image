@@ -1,4 +1,4 @@
-image: gitpod/workspace-node-22:latest
+image: ubuntu:22.04
 tasks:
   - name: foo
     init: sleep 303
