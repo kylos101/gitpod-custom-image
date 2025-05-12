@@ -23,4 +23,4 @@ RUN printenv | awk -F= '{print $1}' > /home/gitpod/build_time_vars
 
 RUN echo "${FOO_VISIBLE}" > /home/gitpod/only_with_gp_validate
 RUN echo "${FOO_HIDDEN}" > /home/gitpod/should_not_exist
-RUN echo "${TEST_ME}" > /home/gitpod/test_me
+RUN echo "${TEST_ME}" > /var/gitpod/test_me
