@@ -1,6 +1,6 @@
 FROM gitpod/workspace-node-22:2025-01-23-10-32-08
 
-ENV TRIGGER_REBUILD=7
+ENV TRIGGER_REBUILD=8
 
 RUN apt-get update && apt-get install -yq \
     git \
@@ -24,3 +24,4 @@ RUN printenv | awk -F= '{print $1}' > /home/gitpod/build_time_vars
 RUN echo "${FOO_VISIBLE}" > /home/gitpod/only_with_gp_validate
 RUN echo "${FOO_HIDDEN}" > /home/gitpod/should_not_exist
 RUN echo "${TEST_ME}" > /var/gitpod/test_me
+RUN echo "foo" > /var/gitpod/bar
