@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: foo
-    init: sleep 303
+    init: echo ${TEST_ME} > /workspace/gitpod-custom-image/prebuild_only
   # - name: tailscaled
   #   command: |
   #     if [ -n "${TAILSCALE_STATE_MYPROJECT}" ]; then
