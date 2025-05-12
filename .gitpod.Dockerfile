@@ -1,6 +1,5 @@
-FROM gitpod/workspace-node-22:2025-01-23-10-32-08
-
-ENV TRIGGER_REBUILD=9
+FROM gitpod/workspace-base
+ENV TRIGGER_REBUILD=0
 
 RUN apt-get update && apt-get install -yq \
     git \
@@ -16,6 +15,7 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 RUN apt-get update && apt-get install -yq golang-go
 
+RUN mkdir /var/gitpod
 RUN echo "${TEST_ME}" > /var/gitpod/test_me
 RUN echo "foo" > /var/gitpod/bar
 
