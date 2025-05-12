@@ -1,4 +1,4 @@
-FROM gitpod/workspace-base
+FROM gitpod/workspace-full
 ENV TRIGGER_REBUILD=0
 
 RUN apt-get update && apt-get install -yq \
